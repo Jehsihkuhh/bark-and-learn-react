@@ -1,16 +1,16 @@
-function BreedPicker({ setSelectedBreed }) {
-    const [selectedCategory, setSelectedCategory] = useState('');
-  
-    const handleCategoryChange = (event) => {
-      setSelectedCategory(event.target.value);
-      setSelectedBreed(''); // reset selected breed if they change category
-    };
-  
-    const handleBreedSelect = (breed) => {
-      setSelectedBreed(breed); // ✅ sends breed up to App.js
-    };
-  }
-  
+import React, { useState } from 'react';
+
+function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+    setSelectedBreed(''); // reset selected breed if they change category
+  };
+
+  const handleBreedSelect = (breed) => {
+    setSelectedBreed(breed); // ✅ sends breed up to a parent component
+  };
 
   return (
     <div>
@@ -22,7 +22,7 @@ function BreedPicker({ setSelectedBreed }) {
 
       {selectedCategory &&
         <div>
-          {breedData[selectedCategory].map(breed => (
+          {breedData[selectedCategory]?.map(breed => (
             <button key={breed} onClick={() => handleBreedSelect(breed)}>
               {breed}
             </button>
