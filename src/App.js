@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TreatCounter from './components/TreatCounter';
-import BreedPicker from './components/BreedPicker';
-import DogFact from './components/DogFact';
+import TreatCounter from '../components/TreatCounter';
+import BreedPicker from '../components/BreedPicker';
+import DogFact from '../components/DogFact';
 
 function App() {
   const [treats, setTreats] = useState(0);
