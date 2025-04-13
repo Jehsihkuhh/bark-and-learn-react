@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 const facts = [
-  "Dogs have been our companions for about 14,000 years.",
+  "Dogs curl up in a ball when sleeping to protect their organs.",
   "A dog's sense of smell is at least 40 times better than ours.",
-  "Dogs pant to cool themselves."
+  "A dog’s nose print is unique, much like a person’s fingerprint",
+  "Dog's noses can sense heat and thermal radiation, which explains why blind or deaf dogs can still hunt.",
+  "Dogs have about 1,700 taste buds."
 ];
 
 function DogFact() {
