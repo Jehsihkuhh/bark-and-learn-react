@@ -39,7 +39,7 @@ function BreedPicker() {
       {selectedBreed &&
         <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px' }}>
           <h2>{selectedBreed}</h2>
-          <img src={images/${selectedBreed.toLowerCase()}.jpg} alt={selectedBreed} style={{ width: '300px' }} />
+          <img src={`images/${selectedBreed.toLowerCase()}.jpg`} alt={selectedBreed} style={{ width: '300px' }} />
         </div>
       }
     </div>
