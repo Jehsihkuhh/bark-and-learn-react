@@ -1,31 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import TestComponent from "./components/TestComponent";
-
-const Comp = () => {
-  return <p>This is a comp component</p>
-}
+import React, { useState } from 'react';
+import TreatCounter from './components/TreatCounter';
+import BreedPicker from './components/BreedPicker';
+import DogFact from './components/DogFact';
 
 function App() {
-  return (
-    <div className="App" id='root'>
-            <TestComponent />
+  const [treats, setTreats] = useState(0);
+  const [breedPickerUnlocked, setBreedPickerUnlocked] = useState(false);
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Comp />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  // Increment the treat count and unlock the breed picker once a treat is given
+  const incrementTreats = () => {
+    const newCount = treats + 1;
+    setTreats(newCount);
+    if (newCount >= 1) {
+      setBreedPickerUnlocked(true); // Unlock the breed picker after 1 treat
+    }
+  };
+
+  return (
+    <div className="App" style={{ textAlign: 'center', padding: '20px' }}>
+      {/* Treat Counter */}
+      <TreatCounter treats={treats} incrementTreats={incrementTreats} />
+
+      {/* Breed Picker */}
+      {breedPickerUnlocked && <BreedPicker />}
+
+      {/* Dog Fact Button */}
+      <DogFact />
     </div>
   );
 }
