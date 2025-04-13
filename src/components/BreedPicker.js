@@ -9,7 +9,7 @@ function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
   };
 
   const handleBreedSelect = (breed) => {
-    setSelectedBreed(breed); // ✅ sends breed up to a parent component
+    setSelectedBreed(breed); // sends breed up to a parent component
   };
 
   return (
@@ -20,22 +20,26 @@ function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
         <option value="small">Little Breed</option>
       </select>
 
-      {selectedCategory &&
+      {selectedCategory && (
         <div>
-          {breedData[selectedCategory]?.map(breed => (
+          {breedData[selectedCategory]?.map((breed) => (
             <button key={breed} onClick={() => handleBreedSelect(breed)}>
               {breed}
             </button>
           ))}
         </div>
-      }
+      )}
 
-      {selectedBreed &&
+      {selectedBreed && (
         <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px' }}>
           <h2>{selectedBreed}</h2>
-          <img src={`images/${selectedBreed.toLowerCase()}.jpg`} alt={selectedBreed} style={{ width: '300px' }} />
+          <img
+            src={`images/${selectedBreed.toLowerCase()}.jpg`}
+            alt={selectedBreed}
+            style={{ width: '300px' }}
+          />
         </div>
-      }
+      )}
     </div>
   );
 }

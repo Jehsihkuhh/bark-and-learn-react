@@ -3,6 +3,11 @@ import TreatCounter from './components/TreatCounter';
 import BreedPicker from './components/BreedPicker';
 import DogFact from './components/DogFact';
 
+const breedData = {
+  big: ['Labrador', 'German Shepherd', 'Golden Retriever'],
+  small: ['Pomeranian', 'Chihuahua', 'Dachshund']
+};
+
 function App() {
   const [treats, setTreats] = useState(0);
   const [breedPickerUnlocked, setBreedPickerUnlocked] = useState(false);
@@ -23,10 +28,14 @@ function App() {
       <TreatCounter treats={treats} incrementTreats={incrementTreats} />
 
       {breedPickerUnlocked && (
-        <BreedPicker setSelectedBreed={setSelectedBreed} />
+        <BreedPicker
+          setSelectedBreed={setSelectedBreed}
+          breedData={breedData}  // Pass breedData here
+          selectedBreed={selectedBreed}
+        />
       )}
 
-      {/* ✅ DogFact only shows if a breed was selected */}
+      {/* DogFact only shows if a breed is selected */}
       {selectedBreed && <DogFact />}
     </div>
   );
