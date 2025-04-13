@@ -18,7 +18,7 @@ function DogFact() {
 
   return (
     <div style={{ marginTop: '20px' }}>
-      <button onClick={generateRandomFact}>Get a Dog Fact!</button>
+      <button onClick={generateRandomFact}>Get a Random Dog Fact!</button>
       {fact && <p>{fact}</p>}
     </div>
   );
