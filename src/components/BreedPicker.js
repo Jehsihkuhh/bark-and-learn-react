@@ -1,22 +1,16 @@
-import React, { useState } from 'react';
-
-const breedData = {
-  big: ['Labrador', 'German Shepherd', 'Golden Retriever'],
-  small: ['Pomeranian', 'Chihuahua', 'Dachshund']
-};
-
-function BreedPicker() {
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedBreed, setSelectedBreed] = useState('');
-
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-    setSelectedBreed('');
-  };
-
-  const handleBreedSelect = (breed) => {
-    setSelectedBreed(breed);
-  };
+function BreedPicker({ setSelectedBreed }) {
+    const [selectedCategory, setSelectedCategory] = useState('');
+  
+    const handleCategoryChange = (event) => {
+      setSelectedCategory(event.target.value);
+      setSelectedBreed(''); // reset selected breed if they change category
+    };
+  
+    const handleBreedSelect = (breed) => {
+      setSelectedBreed(breed); // ✅ sends breed up to App.js
+    };
+  }
+  
 
   return (
     <div>

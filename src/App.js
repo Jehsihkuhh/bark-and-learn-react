@@ -6,6 +6,7 @@ import DogFact from './components/DogFact';
 function App() {
   const [treats, setTreats] = useState(0);
   const [breedPickerUnlocked, setBreedPickerUnlocked] = useState(false);
+  const [selectedBreed, setSelectedBreed] = useState('');
 
   const incrementTreats = () => {
     const newCount = treats + 1;
@@ -19,14 +20,14 @@ function App() {
 
   return (
     <div className="App" style={{ textAlign: 'center', padding: '20px' }}>
-      {/* Treat Counter */}
       <TreatCounter treats={treats} incrementTreats={incrementTreats} />
 
-      {/* Breed Picker appears only after 3 treats */}
-      {breedPickerUnlocked && <BreedPicker />}
+      {breedPickerUnlocked && (
+        <BreedPicker setSelectedBreed={setSelectedBreed} />
+      )}
 
-      {/* Dog Fact Button - Always available */}
-      <DogFact />
+      {/* ✅ DogFact only shows if a breed was selected */}
+      {selectedBreed && <DogFact />}
     </div>
   );
 }
