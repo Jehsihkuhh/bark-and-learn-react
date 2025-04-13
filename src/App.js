@@ -7,12 +7,13 @@ function App() {
   const [treats, setTreats] = useState(0);
   const [breedPickerUnlocked, setBreedPickerUnlocked] = useState(false);
 
-  // Increment the treat count and unlock the breed picker once a treat is given
   const incrementTreats = () => {
     const newCount = treats + 1;
     setTreats(newCount);
-    if (newCount >= 1) {
-      setBreedPickerUnlocked(true); // Unlock the breed picker after 1 treat
+
+    // Unlock the breed picker after 3 treats
+    if (newCount >= 3 && !breedPickerUnlocked) {
+      setBreedPickerUnlocked(true);
     }
   };
 
@@ -21,10 +22,10 @@ function App() {
       {/* Treat Counter */}
       <TreatCounter treats={treats} incrementTreats={incrementTreats} />
 
-      {/* Breed Picker */}
+      {/* Breed Picker appears only after 3 treats */}
       {breedPickerUnlocked && <BreedPicker />}
 
-      {/* Dog Fact Button */}
+      {/* Dog Fact Button - Always available */}
       <DogFact />
     </div>
   );
