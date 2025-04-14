@@ -1,4 +1,5 @@
-"homepage": "https://github.com/Jehsihkuhh/bark-and-learn-react",
+"homepage": "https://Jehsihkuhh.github.io/bark-and-learn-react",
+
 {
   "name": "template-react",
   "version": "0.1.0",
@@ -35,10 +36,7 @@
     "local:open": "concurrently \"npm run start\" \"npm run cy:open\"",
     "local:run": "concurrently --kill-others --success=first \"npm run start\" \"npm run cy:run\"",
     "local:component": "concurrently --kill-others --success=first \"npm run start\" \"npm run cy:run:component\"",
-    "local:run:record": "start 8080 cy:run:record",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-
+    "local:run:record": "start 8080 cy:run:record"
   },
   "eslintConfig": {
     "extends": [
