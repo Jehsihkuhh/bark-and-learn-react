@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './BreedPicker.css';
 
 function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
   const [selectedCategory, setSelectedCategory] = useState('');
