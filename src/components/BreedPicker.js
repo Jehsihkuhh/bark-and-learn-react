@@ -34,7 +34,7 @@ function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
         <div style={{ marginTop: '20px', textAlign: 'center' }}>
           <h2>{selectedBreed}</h2>
           <img
-            src={`/images/${selectedBreed}.jpeg`}
+            src={`/images/${selectedBreed.replace(/\s+/g, '%20')}.jpeg`}
             alt={selectedBreed}
             style={{ width: '250px', height: 'auto', borderRadius: '8px' }}
           />
