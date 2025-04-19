@@ -5,7 +5,7 @@ import DogFact from './components/DogFact';
 
 const breedData = {
   big: ['Labrador', 'German Shepherd', 'Golden Retriever'],
-  small: ['Pomeranian', 'Chihuahua', 'Dachshund']
+  small: ['Pomeranian', 'Chihuahua', 'Yorkie']
 };
 
 function App() {
