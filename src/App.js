@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 import TreatCounter from './components/TreatCounter';
 import BreedPicker from './components/BreedPicker';
 import DogFact from './components/DogFact';
