@@ -4,7 +4,7 @@ import BreedPicker from './components/BreedPicker';
 import DogFact from './components/DogFact';
 
 const breedData = {
-  big: ['labrador', 'germansheperd', 'goldenretriever'],
+  big: ['labrador', 'germanshepherd', 'goldenretriever'],
   small: ['pomeranian', 'chihuahua', 'yorkie']
 };
 
