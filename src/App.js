@@ -18,7 +18,7 @@ function App() {
     const newCount = treats + 1;
     setTreats(newCount);
 
-    // unlock the breed picker after 3 treats
+   
     if (newCount >= 3 && !breedPickerUnlocked) {
       setBreedPickerUnlocked(true);
     }
@@ -31,12 +31,12 @@ function App() {
       {breedPickerUnlocked && (
         <BreedPicker
           setSelectedBreed={setSelectedBreed}
-          breedData={breedData}  // pass breedData 
+          breedData={breedData}  
           selectedBreed={selectedBreed}
         />
       )}
 
-      {/* DogFact only shows if a breed is selected */}
+      
       {selectedBreed && <DogFact />}
     </div>
   );

@@ -5,11 +5,11 @@ function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
-    setSelectedBreed(''); // reset selected breed if they change category
+    setSelectedBreed(''); 
   };
 
   const handleBreedSelect = (breed) => {
-    setSelectedBreed(breed); // sends breed up to a parent component
+    setSelectedBreed(breed); 
   };
 
   return (
