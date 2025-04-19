@@ -37,5 +37,9 @@
   }
 }
 
-
+body {
+  background: linear-gradient(135deg, #ffd6e0, #fff6b7); 
+  margin: 0;
+  font-family: sans-serif;
+}
 
