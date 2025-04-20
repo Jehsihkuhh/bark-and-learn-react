@@ -37,7 +37,7 @@ function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
         </div>
       )}
 
-      {selectedBreed && (
+      {selectedBreed && selectedBreedData && (
         <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px' }}>
           <h2>{selectedBreed}</h2>
           <img
