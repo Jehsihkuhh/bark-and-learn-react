@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bark-and-learn-react/static/css/main.02d84d46.css",
-    "main.js": "/bark-and-learn-react/static/js/main.b3906b62.js",
+    "main.js": "/bark-and-learn-react/static/js/main.05cf0018.js",
     "static/js/787.ddb4019e.chunk.js": "/bark-and-learn-react/static/js/787.ddb4019e.chunk.js",
     "index.html": "/bark-and-learn-react/index.html",
     "main.02d84d46.css.map": "/bark-and-learn-react/static/css/main.02d84d46.css.map",
-    "main.b3906b62.js.map": "/bark-and-learn-react/static/js/main.b3906b62.js.map",
+    "main.05cf0018.js.map": "/bark-and-learn-react/static/js/main.05cf0018.js.map",
     "787.ddb4019e.chunk.js.map": "/bark-and-learn-react/static/js/787.ddb4019e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02d84d46.css",
-    "static/js/main.b3906b62.js"
+    "static/js/main.05cf0018.js"
   ]
 }
