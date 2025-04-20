@@ -2,15 +2,22 @@ import React, { useState } from 'react';
 
 function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedBreedData, setSelectedBreedData] = useState(null);
 
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
     setSelectedBreed(''); 
+    setSelectedBreedData(null);
   };
 
-  const handleBreedSelect = (breed) => {
-    setSelectedBreed(breed); 
+  const handleBreedSelect = (breedName) => {
+    setSelectedBreed(breedName); 
+    const breedInfo = breedData[selectedCategory]?.find(
+      (breed) => breed.name === breedName
+    );
+    setSelectedBreedData(breedInfo); 
   };
+
 
   return (
     <div>
@@ -23,8 +30,8 @@ function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {
       {selectedCategory && (
         <div>
           {breedData[selectedCategory]?.map((breed) => (
-            <button key={breed} onClick={() => handleBreedSelect(breed)}>
-              {breed}
+            <button key={breed.name} onClick={() => handleBreedSelect(breed.name)}>
+              {breed.name}
             </button>
           ))}
         </div>

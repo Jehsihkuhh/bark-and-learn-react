@@ -5,8 +5,16 @@ import BreedPicker from './components/BreedPicker';
 import DogFact from './components/DogFact';
 
 const breedData = {
-  big: ['Labrador', 'German Shepherd', 'Golden Retriever'],
-  small: ['Pomeranian', 'Chihuahua', 'Yorkie']
+  big: [
+    { name: 'Labrador', size: 'Large', temperament: 'Friendly, Active' },
+    { name: 'German Shepherd', size: 'Large', temperament: 'Intelligent, Brave' },
+    { name: 'Golden Retriever', size: 'Large', temperament: 'Friendly, Reliable' }
+  ],
+  small: [
+    { name: 'Pomeranian', size: 'Small', temperament: 'Playful, Bold' },
+    { name: 'Chihuahua', size: 'Small', temperament: 'Loyal, Alert' },
+    { name: 'Yorkie', size: 'Small', temperament: 'Affectionate, Spirited' }
+  ]
 };
 
 function App() {
