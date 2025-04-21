@@ -10,6 +10,16 @@ const facts = [
   "Dogs can smell cancer cells."
 ];
 
+
+/**
+ * This is the component that displays a button for generating random dog facts. 
+ * When the button is clicked, a random fact about dogs is displayed.
+ *
+ * @component
+ * @returns {JSX.Element} is the rendered component which is a button that user's click to trigger
+ * the dog fact in a paragraph format.
+ */
+
 function DogFact() {
   const [fact, setFact] = useState('');
 

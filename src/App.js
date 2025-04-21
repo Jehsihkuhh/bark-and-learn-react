@@ -17,6 +17,18 @@ const breedData = {
   ]
 };
 
+/**
+ * This is the main/root of the application. It manages the states for the treat count, whether the breed picker should be 
+ * unlocked after 3 treats and the current selected dog.
+ *
+ * The components used are:
+ * - TreatCounter: Increments the treat count
+ * - BreedPicker: Allows breed selection once unlocked after 3 treats
+ * - DogFact: Shows a random dog fact only after breed is selected/unlocked
+ *
+ * @component
+ * @returns {JSX.Element} is for the rendered app with interactive dog features
+ */
 function App() {
   const [treats, setTreats] = useState(0);
   const [breedPickerUnlocked, setBreedPickerUnlocked] = useState(false);

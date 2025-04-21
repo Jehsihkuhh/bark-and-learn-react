@@ -6,12 +6,12 @@ import React, { useState } from 'react';
  * from that category. It displays specific breed information once a breed is selected.
  *
  * @component
- * @param {Object} props - the component props
- * @param {Function} props.setSelectedBreed - function to set the currently selected breed
- * @param {string} props.selectedBreed - currently selected breed
- * @param {Object} props.breedData - an object that contains breed information categorized by type and each category should
+ * @param {Object} props is for the component props
+ * @param {Function} props.setSelectedBreed is a function used to set the currently selected breed
+ * @param {string} props.selectedBreed is the currently selected breed
+ * @param {Object} props.breedData is an object that contains breed information categorized by type and each category should
  * contain an array of breed objects with properties such as `name`, `size`, and `temperament` created in App.js.
- * @returns {JSX.Element} the rendered component
+ * @returns {JSX.Element} is the rendered component
  */
 
 function BreedPicker({ setSelectedBreed, selectedBreed, breedData }) {

@@ -4,10 +4,10 @@ import React from 'react';
  * This is a component that shows the number of treats given when a large dog emoji button is clicked with an incremented count system.
  *
  * @component
- * @param {Object} props - component props
- * @param {number} props.treats - the current number of treats given
- * @param {Function} props.incrementTreats - function to increment the treat count
- * @returns {JSX.Element} the rendered TreatCounter component
+ * @param {Object} props is component props
+ * @param {number} props.treats is for the current number of treats given
+ * @param {Function} props.incrementTreats is the function to increment the treat count
+ * @returns {JSX.Element} is the rendered TreatCounter component
  */
 
 function TreatCounter({ treats, incrementTreats }) {
