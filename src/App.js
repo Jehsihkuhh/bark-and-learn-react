@@ -27,7 +27,7 @@ const breedData = {
  * - DogFact: Shows a random dog fact only after breed is selected/unlocked
  *
  * @component
- * @returns {JSX.Element} is for the rendered app with interactive dog features
+ * @returns {JSX.Element} is for the rendered app with interactive dog features implemented
  */
 function App() {
   const [treats, setTreats] = useState(0);
